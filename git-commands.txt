@@ -1,0 +1,31 @@
+# 1. Initialize a new Git repository in the current directory
+git init  # Initializes a Git repository in the current folder
+
+# 2. Check the status of the repository to see untracked and staged files
+git status  # Displays the current state of the repository
+
+# 3. Add all files in the directory to the staging area for commit
+git add .  # Stages all changes for the next commit
+
+# 4. Commit the staged files with a descriptive commit message
+git commit -m "Initial commit or description of changes"  # Commits the staged changes
+
+# 5. Add the remote repository URL (replace <your-repository-url> with your actual GitHub URL)
+git remote add origin <your-repository-url>  # Adds the remote repository
+
+# 6. Verify that the remote URL is set correctly
+git remote -v  # Displays the remote URL to verify it
+
+# 7. Pull the latest changes from the remote repository (if needed)
+git pull origin main  # Fetches and merges changes from the remote 'main' branch
+
+# 8. Push the local changes to the remote repository (set upstream branch for first push)
+git push --set-upstream origin main  # Pushes changes to the remote 'main' branch
+
+# 9. Resolve any merge conflicts if necessary (after pulling changes)
+# - Open conflicting files, resolve the conflicts, then add and commit the changes
+git add <conflicted-file>  # Stages the resolved conflict file
+git commit -m "Resolved merge conflicts"  # Commits the resolved conflicts
+
+# 10. Force push (use with caution: overwrites remote changes with local)
+git push --force origin main  # Force push local changes to remote 'main' branch, overwrites remote history
